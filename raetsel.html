@@ -1,0 +1,32 @@
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="raetsel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Rätsel</title>
+</head>
+
+<body>
+    <h1>Wo wohnt der Weihnachtsmann?</h1>
+    <p>Finde die richtige Antwort und Du bekommst Zugriff auf harmonische Flötenmusik von Merle.</p>
+    <button onclick="window.location.href='./türchen/1merle.html'">Betrunken in meinem Garten</button>
+    <button onclick="window.location.href='./türchen/1merle.html'">Auf dem Dach der CJD Schule Sellin</button>
+    <button onclick="window.location.href='./türchen/1merle.html'">Im Kursgewinn von Coca-Cola</button>
+    <button onclick="window.location.href='./türchen/1merle.html'">Was ist ein Weihnachtsmann?</button>
+</body>
+
+<script>
+    const buttons = document.querySelectorAll("button")
+
+    for (let index = 0; index < buttons.length; index++) {
+        const element = buttons[index];
+        element.addEventListener("click", () => window.location.href = "#")  // ! Bei href bitte die passende URL einfügen !
+    }
+</script>
+
+</html>
