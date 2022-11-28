@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adventskalender.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,10 +14,38 @@
 </head>
 
 <body>
+    <nav><a href="./spenden.html">Unsere Abi-Klasse</a></nav>
     <h1><span>In x Tagen</span> beginnt Dein digitaler Adventskalender</h1>
     <p>Ab dem 1. Dezember erwarten Dich täglich einmalige Kunstwerke,
         seltene Rezepte und weihnachtliche Musik von uns. Probiere schon heute exklusiv den entspannten Advent aus!</p>
     <button onclick="window.location.href='./raetsel.html'">1. Türchen vorzeitig öffnen</button>
+    <div class="advent-grid">
+        <img src="./Tuerchen SVG/Element 1.svg" alt="" id="tag1">
+        <img src="./Tuerchen SVG/Element 2.svg" alt="" id="tag2">
+        <img src="./Tuerchen SVG/Element 3.svg" alt="" id="tag3">
+        <img src="./Tuerchen SVG/Element 4.svg" alt="" id="tag4" class="wide">
+        <img src="./Tuerchen SVG/Element 5.svg" alt="" id="tag5">
+        <img src="./Tuerchen SVG/Element 6.svg" alt="" id="tag6" class="tall">
+        <img src="./Tuerchen SVG/Element 7.svg" alt="" id="tag7" class="tall">
+        <img src="./Tuerchen SVG/Element 8.svg" alt="" id="tag8">
+        <img src="./Tuerchen SVG/Element 9.svg" alt="" id="tag9" class="tall">
+        <img src="./Tuerchen SVG/Element 10.svg" alt="" id="tag10" class="wide tall">
+        <img src="./Tuerchen SVG/Element 11.svg" alt="" id="tag11">
+        <img src="./Tuerchen SVG/Element 12.svg" alt="" id="tag12">
+        <img src="./Tuerchen SVG/Element 13.svg" alt="" id="tag13" class="tall">
+        <img src="./Tuerchen SVG/Element 14.svg" alt="" id="tag14" class="wide">
+        <img src="./Tuerchen SVG/Element 15.svg" alt="" id="tag15">
+        <img src="./Tuerchen SVG/Element 16.svg" alt="" id="tag16" class="tall">
+        <img src="./Tuerchen SVG/Element 17.svg" alt="" id="tag17" class="tall">
+        <img src="./Tuerchen SVG/Element 18.svg" alt="" id="tag18">
+        <img src="./Tuerchen SVG/Element 19.svg" alt="" id="tag19" class="tall">
+        <img src="./Tuerchen SVG/Element 20.svg" alt="" id="tag20" class="wide tall">
+        <img src="./Tuerchen SVG/Element 21.svg" alt="" id="tag21">
+        <img src="./Tuerchen SVG/Element 22.svg" alt="" id="tag22">
+        <img src="./Tuerchen SVG/Element 23.svg" alt="" id="tag23" class="tall">
+        <img src="./Tuerchen SVG/Element 24.svg" alt="" id="tag24" class="wide">
+        <img src="./Tuerchen SVG/Element 25.svg" alt="" id="tag25">
+    </div>
 </body>
 
 <script>
@@ -28,6 +57,26 @@
     let result = Math.ceil((first_december.getTime() - present_date.getTime()) / one_day);
 
     document.querySelector("h1 span").innerText = result == 1 ? "Morgen" : `In ${result} Tagen`
+
+
+    const doors = document.querySelectorAll(".advent-grid img");
+
+    //legt fest, bis wohin Türen geöffnet werden dürfen
+    let currentDay = new Date().getDate()
+    if (currentDay > 25) {
+        if (new Date().getMonth === 11) {
+            currentDay = 25
+        } else {
+            currentDay = 0
+        }
+    }
+
+    for (let i = 0; i < currentDay; i++) {
+        doors[i].addEventListener("click", door => {
+            door.target.classList.add("opened")
+            setTimeout(() => window.location.href = `./${door.target.id}.html`, 500)
+        })
+    }
 </script>
 
 </html>

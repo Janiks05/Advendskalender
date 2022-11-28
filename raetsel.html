@@ -14,10 +14,10 @@
 <body>
     <h1>Wo wohnt der Weihnachtsmann?</h1>
     <p>Finde die richtige Antwort und Du bekommst Zugriff auf harmonische Flötenmusik von Merle.</p>
-    <button onclick="window.location.href='./türchen/1merle.html'">Betrunken in meinem Garten</button>
-    <button onclick="window.location.href='./türchen/1merle.html'">Auf dem Dach der CJD Schule Sellin</button>
-    <button onclick="window.location.href='./türchen/1merle.html'">Im Kursgewinn von Coca-Cola</button>
-    <button onclick="window.location.href='./türchen/1merle.html'">Was ist ein Weihnachtsmann?</button>
+    <button>Betrunken in meinem Garten</button>
+    <button>Auf dem Dach der CJD Schule Sellin</button>
+    <button>Im Kursgewinn von Coca-Cola</button>
+    <button>Was ist ein Weihnachtsmann?</button>
 </body>
 
 <script>
@@ -25,7 +25,7 @@
 
     for (let index = 0; index < buttons.length; index++) {
         const element = buttons[index];
-        element.addEventListener("click", () => window.location.href = "#")  // ! Bei href bitte die passende URL einfügen !
+        element.addEventListener("click", () => window.location.href="./türchen/1merle.html")
     }
 </script>
 
