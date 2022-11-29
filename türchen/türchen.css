@@ -34,3 +34,6 @@ main img {
     width: 85%;
     height: auto;
 }
+main a{
+    color: rgb(146, 172, 255);
+}
