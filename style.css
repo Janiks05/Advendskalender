@@ -12,7 +12,7 @@ html {
 body {
   min-height: 100vh;
   padding: 6vh calc(15vw - 3.5rem);
-  background: url("./tannenzweig.jpg") no-repeat center/cover;
+  background: url("./tannenzweig.webp") no-repeat center/cover;
 }
 
 h1 {
@@ -20,7 +20,7 @@ h1 {
   font-weight: bold;
   max-width: 30ch;
   margin-bottom: 3rem;
-  color: rgb(252, 203, 203);
+  color: hsl(0, 89%, 93%);
   filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.15));
   line-height: 1.15;
 }
