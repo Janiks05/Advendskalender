@@ -15,10 +15,9 @@
 
 <body>
     <nav><a href="./spenden.html">Unsere Abi-Klasse</a></nav>
-    <h1><span>In x Tagen</span> beginnt Dein digitaler Adventskalender</h1>
-    <p>Ab dem 1. Dezember erwarten Dich täglich einmalige Kunstwerke,
-        seltene Rezepte und weihnachtliche Musik von uns. Probiere schon heute exklusiv den entspannten Advent aus!</p>
-    <button onclick="window.location.href='./raetsel.html'">1. Türchen vorzeitig öffnen</button>
+    <h1>Dein digitaler Adventskalender</h1>
+    <p>Seit dem 1. Dezember erwarten Dich täglich einmalige Kunstwerke,
+        seltene Rezepte und weihnachtliche Musik von uns. Probiere jetzt exklusiv den entspannten Advent aus!</p>
     <div class="advent-grid">
         <img src="./Tuerchen SVG/Element 1.svg" alt="" id="tag1">
         <img src="./Tuerchen SVG/Element 2.svg" alt="" id="tag2">
@@ -56,8 +55,6 @@
     // Calculate the time differece in milliseconds and then convert into days
     let result = Math.ceil((first_december.getTime() - present_date.getTime()) / one_day);
 
-    document.querySelector("h1 span").innerText = result == 1 ? "Morgen" : `In ${result} Tagen`
-
 
     const doors = document.querySelectorAll(".advent-grid img");
 
@@ -74,7 +71,7 @@
     for (let i = 0; i < currentDay; i++) {
         doors[i].addEventListener("click", door => {
             door.target.classList.add("opened")
-            setTimeout(() => window.location.href = `./${door.target.id}.html`, 500)
+            setTimeout(() => window.location.href = `./türchen/${door.target.id}.html`, 500)
         })
     }
 </script>
