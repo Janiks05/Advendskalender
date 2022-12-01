@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Nickainley-Normal;
+    src: url("./Nickainley-Normal.otf") format("opentype");
+}
+
 .advent-grid {
   width: 100%;
   display: grid;
@@ -5,6 +10,7 @@
   grid-template-columns: 5fr 5fr repeat(2, 4fr 5fr);
   grid-gap: 1vw 2vw;
   margin-top: 5rem;
+  perspective: 500px;
 }
 
 .wide {
@@ -23,6 +29,7 @@
 .advent-grid > * {
     width: 100%;
     transform-origin: left;
+    transform-style: preserve-3d;
     transition: transform .5s ease-out, filter .3s ease-in-out;
 }
 
@@ -32,5 +39,5 @@
 }
 
 .opened {
-    transform: rotateY(105deg);
+    transform: rotateY(-115deg);
 }
