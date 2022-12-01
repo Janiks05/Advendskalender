@@ -55,8 +55,6 @@
     // Calculate the time differece in milliseconds and then convert into days
     let result = Math.ceil((first_december.getTime() - present_date.getTime()) / one_day);
 
-    document.querySelector("h1 span").innerText = result == 1 ? "Morgen" : `In ${result} Tagen`
-
 
     const doors = document.querySelectorAll(".advent-grid img");
 
