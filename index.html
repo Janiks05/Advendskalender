@@ -74,7 +74,7 @@
     for (let i = 0; i < currentDay; i++) {
         doors[i].addEventListener("click", door => {
             door.target.classList.add("opened")
-            setTimeout(() => window.location.href = `./${door.target.id}.html`, 500)
+            setTimeout(() => window.location.href = `./material/${door.target.id}.html`, 500)
         })
     }
 </script>
