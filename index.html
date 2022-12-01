@@ -9,15 +9,18 @@
     <link rel="stylesheet" href="adventskalender.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Adventskalender</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Comfortaa:wght@700&display=swap"
+        rel="stylesheet">
+    <meta name="description"
+        content="Genieß eine genüssliche Adventszeit mit täglicher Musik, Kunstwerken, Rezepten und viel mehr von Deiner Abi-Klasse.">
+    <title>Adventskalender der Selliner Q12</title>
 </head>
 
 <body>
-    <nav><a href="./spenden.html">Unsere Abi-Klasse</a></nav>
-    <h1>Dein digitaler Adventskalender</h1>
-    <p>Seit dem 1. Dezember erwarten Dich täglich einmalige Kunstwerke,
-        seltene Rezepte und weihnachtliche Musik von uns. Probiere jetzt exklusiv den entspannten Advent aus!</p>
+    <nav><button onclick="window.location.href='./spenden.html'">Über unsere Abi-Klasse</button></nav>
+    <h1>Dein digitaler Adventskalender für genüssliche Weihnachtstage</h1>
+    <p>Bis zum 24. Dezember erwarten Dich täglich einmalige Kunstwerke,
+        seltene Rezepte und weihnachtliche Musik von uns. Probiere jetzt den entspannten Advent aus!</p>
     <div class="advent-grid">
         <img src="./Tuerchen SVG/Element 1.svg" alt="" id="tag1">
         <img src="./Tuerchen SVG/Element 2.svg" alt="" id="tag2">
@@ -48,14 +51,6 @@
 </body>
 
 <script>
-    const one_day = 1000 * 60 * 60 * 24
-    const present_date = new Date()
-    const first_december = new Date("2022-12-01")
-
-    // Calculate the time differece in milliseconds and then convert into days
-    let result = Math.ceil((first_december.getTime() - present_date.getTime()) / one_day);
-
-
     const doors = document.querySelectorAll(".advent-grid img");
 
     //legt fest, bis wohin Türen geöffnet werden dürfen
