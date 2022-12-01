@@ -63,7 +63,7 @@ button {
   border-radius: 8px;
   font-weight: 600;
   background-color: hsl(350, 90%, 35%);
-  padding: 0.7em 1em;
+  padding: 0.6em .9em;
   transition: all 0.3s ease-out;
   margin-top: 4.5rem;
 }
