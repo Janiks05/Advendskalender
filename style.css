@@ -58,15 +58,10 @@ li {
   margin-bottom: 1em;
 }
 
-summary {
+#iban strong {
   font-weight: 600;
   color: hsl(39, 100%, 75%);
-  margin-bottom: 0.5em;
   transition: all 0.4s ease-out;
-}
-summary:hover {
-  cursor: pointer;
-  color: hsl(39, 100%, 85%);
 }
 
 a {
