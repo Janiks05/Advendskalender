@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Zeichnung</title>
+    <title>Türchen 4</title>
 </head>
+
 <body>
-    <main>
-        <h1>Türchen 4</h1>
-        <h2>Zeichnung von Laura</h2>
-        <img src="./material/Laura_Adventskalender.jpg" alt="">
-    </main>
+    <h1>Das Wichtigste an Weihnachten</h1>
+    <h2>Eine Fabel - aufgenommen von 10 Schülern</h2>
+    <audio controls>
+        <source src="material/Weihnachtsfabel Tiere.mp3" type="audio/mp3">
+        Musikwiedergabe wird von deinem Browser nicht unterstützt.
+    </audio>
+    <button onclick="handleClick()">Anhören</button>
+    <p>Einige Tiere diskutierten einmal über
+        Weihnachten. Sie stritten sich darüber, was
+        wohl die Hauptsache an Weihnachten ist. <br><br>
+        “Na klar, Gänsebraten”, sagte der Fuchs, “was wäre Weihnachten ohne
+        Gänsebraten!”<br><br>
+        “Schnee”, sagte der Eisbär, “viel Schnee!” Und er schwärmte verzückt: “Weiße Weihnachten feiern!”<br><br>
+        Das Reh sagte: “Ich brauche einen Tannenbaum, sonst kann ich nicht
+        Weihnachten feiern!”<br><br>
+        “Aber nicht so viele Kerzen” , heulte die Eule “schön schummrig und gemütlich muss es sein. Stimmung ist die
+        Hauptsache!”<br><br>
+        “Aber mein neues Kleid muss man sehen”, sagte der Pfau. “Wenn ich kein
+        neues Kleid kriege, ist für mich nicht Weihnachten.”<br><br>
+        “Und Schmuck”, krächzte die Elster. “Jedes Weihnachten kriege ich was: Einen Ring, ein Armband, eine Brosche
+        oder eine Kette, das ist für mich das Allerschönste.”<br><br>
+        “Na, aber bitten den Stollen nicht vergessen”, brummte der Bär, “das ist doch die Hauptsache, wenn es den nicht
+        gibt und all die süßen Sachen, verzichte ich lieber auf Weihnachten.”<br><br>
+        “Mach´s wie ich”, sagte der Dachs, “pennen, pennen, das ist das Wahre an
+        Weihnachten, mal richtig ausschlafen!”<br><br>
+        “Und saufen”, ergänzte der Ochse, “mal richtig einen saufen und dann
+        pennen....”<br><br>
+        ....dann aber schrie er “Aua!!”, denn der Esel hatte ihm einen gewaltigen Tritt versetzt:<br><br>
+        “Du Ochse, denkst du denn nicht an das Kind?” Da senkte der Ochse beschämt den Kopf und sagte: “Das Kind, ja das
+        Kind, <strong>das Kind ist die Hauptsache</strong>.”<br>
+        <em>“Übrigens”, fragte der Esel, “wissen das eigentlich auch die Menschen??”</em>
+        <br><br><br>Wir wünschen Dir einen schönen 2. Advent und hoffen, Du hattest Freude mit der Audioaufnahme!
+    </p>
+    <script>
+        button = document.querySelector("button")
+        function handleClick() {
+            document.querySelector('audio').play();
+            button.disabled = true;
+            button.innerText = "Viel Spaß";
+        }
+    </script>
 </body>
+
 </html>
