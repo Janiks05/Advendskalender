@@ -1,24 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="türchen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Rezept</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="./material/slidePuzzle/puzzle.js"></script>
+    <title>Türchen 8</title>
+    <style>
+        canvas {
+            width: min(100%, 60vh);
+        }
+
+        #finalImage img {
+            max-width: 60vh;
+        }
+
+        figcaption,
+        select,
+        label, option, button {
+            font-size: 2rem;
+            color: white;
+        }
+
+        select,
+        option,
+        button {
+            padding: .5em .8em;
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        select {
+            border-radius: 5px;
+            margin-bottom: 1em;
+            display: block;
+        }
+
+        button {
+            font-weight: 400;
+            opacity: .5;
+            margin-bottom: 1rem;
+        }
+
+        figure {
+            margin-top: 4rem;
+        }
+
+    </style>
 </head>
 
 <body>
-    <main>
-        <h1>Türchen 8</h1>
-        <h2>Rezept von Julian</h2>
-        <p></p>
-        <img src="material/JuliansSpekulatius_Platzchen.jpg" alt="">
-    </main>
+    <h1>Schiebepuzzle</h1>
+    <h2>Foto von Mirja</h2>
+    <p>Klicke auf Kästchen neben dem leeren Feld, um sie zu verschieben. Bis zu welchem Level schaffst du es?</p>
+    <form>
+        <label for="difficulty">Schwierigkeit wählen</label>
+        <select name="difficulty" id="difficulty">
+            <option value="easy">Einfach</option>
+            <option value="medium">Mittel</option>
+            <option value="hard">Schwer</option>
+            <option value="extreme">Extrem</option>
+        </select>
+    </form>
+    <button id="showHint" onclick="hint()">Hilfe anzeigen</button>
+    <figure id="finalImage" style="display: none;">
+        <figcaption>So sieht das fertige Bild aus</figcaption>
+        <img src="./material/slidePuzzle/Mirja-Puzzlebild.jpg"" alt="">
+    </figure>
+    <script>
+        const hintImage = document.querySelector("#finalImage")
+        const hintButton = document.querySelector("#showHint")
+        function hint() {
+            if (hintImage.style.display === "none") {
+                hintImage.style.display = "block"
+                window.location.href = "#finalImage"
+                hintButton.innerText = "Hilfe ausblenden"
+            } else {
+                hintImage.style.display = "none"
+                hintButton.innerText = "Hilfe anzeigen"
+            }
+        }
+    </script>
 </body>
 
 </html>
