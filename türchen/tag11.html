@@ -1,58 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="türchen.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Klavier</title>
+    <title>Türchen 11</title>
 </head>
 
 <body>
     <main>
-        <h1>Türchen 11</h1>
+        <h1>Trois Gnossiennes</h1>
+        <h2>Klaviermusik von Janita</h2>
         <audio controls>
             <source src="./material/Trois Gnossiennes - Erik Satie.m4a" type="audio/mp3">
             Your browser does not support the audio element.
         </audio>
-        <h2>Hey, das war Trois Gnossiennes von Erik Satie. Ich hoffe, es hat euch gefallen!</h2>
+        <button onclick="handleClick()">Anhören</button>
         <p>
-            Hier ein paar Infos zu Satie, für alle, die es interessiert:
             Erik Satie war ein französischer Komponist, der mit seiner kabarettartigen Musik das Pariser Kulturleben
             provozierte. Er wurde im Jahr 1866 in einer kleinen französischen Hafenstadt namens Honfleur geboren und
             starb 1925 an den Folgen seines jahrelangen Alkoholmissbrauchs in Paris.
-            <br>
+            <br><br>
             Seine Musik ist gekennzeichnet von humorvoller Einfachheit, denn er war der Auffassung, man sollte den
             Zuhörer nicht unnötig aufhalten. Er selbst betitelte seine Musik als ,,Musique d’ameublement”, was so viel
-            heißt wie ,,Einrichtungsmusik”. Damit wollte er verdeutlichen, dass Musik ein schönes Hintergrundgeräusch
+            heißt wie ,,Einrichtungsmusik”.<br><br>Damit wollte er verdeutlichen, dass Musik ein schönes
+            Hintergrundgeräusch
             verkörpern, und in einem Raum wie ein Tisch vorhanden sein sollte. Mit der Klarheit seiner Werke und ihrer
             Freiheit in Metrik und Form steht Saties Musik im Kontrast zur typischen romantischen Musikästhetik seiner
             Zeit.
-            <br>
-            „Jeder wird Ihnen sagen, ich sei kein Musiker. Das stimmt.“
-            <br>
-            Interessant sind außerdem seine sehr umfangreichen Spielanweisungen (=sagen einem unteranderem, wie
-            schnell/langsam/hart/weich man die Töne spielen soll). So nutzte Satie nicht die üblichen italienischen
+            <br><br><br>
+            <q style="color: black; background-color: white; padding: .7em 1em; display: block;border-radius: 5px;">Jeder wird Ihnen sagen,
+                ich sei kein Musiker. Das stimmt.</q>
+            <br><br>
+            Auch interessant sind seine sehr umfangreichen <abbr
+                title="wie schnell/langsam/hart/weich Töne gespielt werden sollen">Spielanweisungen</abbr>. So nutzte
+            Satie nicht die üblichen italienischen
             Vorgaben, wie moderato, largo oder allegro, sondern Sätze wie „wie eine Nachtigall mit Zahnschmerzen“ und
             „vergraben Sie den Ton in Ihrer Magengrube“.
-            <br>
-            Seine bekanntesten Werke sind die drei für Klavier solo geschriebenen Gymnopédies, welche ich euch unten
-            verlinke, aber eben auch die Gnossiennes, von denen ich euch die Klaviernoten als PDF bereitstelle. Neben
-            Klavierwerken schrieb er außerdem Ballettmusik, Ragtimemusik und Kammermusik.
-            <br>
-            Saties Musik wurde in über 100 Filmen und Serien verwendet, darunter ,,Das Damengambit” und ,,How I Met Your
-            Mother". Als Vorreiter der Minimal Music ist Satie heute einer der bekanntesten Komponisten der
+            <br><br>
+            Seine bekanntesten Werke sind die drei für Klavier solo geschriebenen <a href="https://youtu.be/S-Xm7s9eGxU"
+                target="_blank">Gymnopédies</a>, aber eben auch die Gnossiennes, von denen ihr <a
+                href="./material/Gnossiennes Musiknoten.pdf" target="_blank">hier die Klaviernoten als PDF</a> findest.
+            Neben
+            Klavierwerken schrieb Erik Satie außerdem Ballettmusik, Ragtimemusik und Kammermusik.
+            <br><br>
+            Saties Musik wurde in über 100 Filmen und Serien verwendet, darunter „Das Damengambit“ und „How I Met Your
+            Mother“. Als Vorreiter der Minimal Music ist Satie heute einer der bekanntesten Komponisten der
             Musikgeschichte und ist vor allem bei Einsteigern aufgrund der Einfachheit seiner Werke beliebt.
-            <br>
+            <br><br>
             Ich wünsche euch noch eine schöne Adventszeit! <br>
             Janita
         </p>
 
     </main>
+    <script>
+        button = document.querySelector("button")
+        function handleClick() {
+            document.querySelector('audio').play();
+            button.disabled = true;
+            button.innerText = "Viel Spaß";
+        }
+    </script>
 </body>
 
 </html>
