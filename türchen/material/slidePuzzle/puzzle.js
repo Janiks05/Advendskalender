@@ -22,26 +22,32 @@ function setup() {
     createdCanvas.width = img.width
     createdCanvas.height = img.height
     document.body.insertBefore(createdCanvas, document.getElementById("finalImage"))
-    canvas = document.getElementById("canvas")
-    canvas.addEventListener("click", e => {
-        const rect = canvas.getBoundingClientRect()
-        const relativeX = e.clientX - rect.left
-        const relativeY = e.clientY - rect.top
-        const selectedColumn = Math.floor(relativeX / (rect.width / cols))
-        const selectedRow = Math.floor(relativeY / (rect.height / rows))
-        move(selectedColumn, selectedRow)
-        draw()
-        if (solved()) {
-            finalAnimation()
-        }
+    canvas = document.getElementById("canvas");
+    ["click", "touchstart"].forEach(touch => {
+        canvas.addEventListener(touch, e => {
+            const rect = canvas.getBoundingClientRect()
+            const relativeX = e.clientX - rect.left
+            const relativeY = e.clientY - rect.top
+            const selectedColumn = Math.floor(relativeX / (rect.width / cols))
+            const selectedRow = Math.floor(relativeY / (rect.height / rows))
+            move(selectedColumn, selectedRow)
+            draw()
+            if (solved()) {
+                finalAnimation()
+            }
+        })
     })
+
     ctx = canvas.getContext("2d")
     ctx.strokeStyle = "white"
     ctx.fillStyle = "#fee4a3"
     start()
 }
 
-document.querySelectorAll("option").forEach(option => option.addEventListener("click", e => changeDifficulty(e.target.value)))
+["click", "touchstart"].forEach(touch => {
+    document.querySelectorAll("option").forEach(option => option.addEventListener(touch, e => changeDifficulty(e.target.value)))
+})
+
 
 function changeDifficulty(level) {
     if (level === "extreme") { rows = 12, cols = 8 }
