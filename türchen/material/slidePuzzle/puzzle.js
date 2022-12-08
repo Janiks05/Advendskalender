@@ -122,13 +122,13 @@ function solved() {
 
 function finalAnimation() {
     const finalImg = new Image()
-    finalImg.src = "./material/slidePuzzle/Mirja-Wallpaper.jpg"
-    setTimeout(() => {
+    finalImg.addEventListener("load", () => {
         ctx.drawImage(finalImg, 0, 0, canvas.width, canvas.height)
         setTimeout(() => {
             if (confirm("Glückwunsch, du hast das Puzzle gelöst! Nochmal spielen?")) {
                 start()
             }
         }, 1000);
-    }, 500);
+    })
+    finalImg.src = "./material/slidePuzzle/Mirja-Wallpaper.jpg"
 }
