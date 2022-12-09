@@ -44,9 +44,7 @@ function setup() {
     start()
 }
 
-["click", "touchstart"].forEach(touch => {
-    document.querySelectorAll("option").forEach(option => option.addEventListener(touch, e => changeDifficulty(e.target.value)))
-})
+document.querySelector("select").addEventListener("change", e => changeDifficulty(e.target.value))
 
 
 function changeDifficulty(level) {
