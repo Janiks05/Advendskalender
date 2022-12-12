@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Türchen 23</title>
+</head>
+
+<body>
+    <main>
+        <h1>Tanz der Zuckerfee</h1>
+        <h2>Flötenspiel von Merle</h2>
+        <audio controls>
+            <source src="material/Tanz der Zuckerfee.mp3" type="audio/mp3">
+            Musikwiedergabe wird von deinem Browser nicht unterstützt.
+        </audio>
+        <button onclick="handleClick()">Anhören</button>
+        <p>Wer tanzt denn hier so wild über das Parkett? Es ist die Zuckerfee aus dem Ballett “Der Nussknacker” von Peter
+        Tschaikowsky. Auch dieses Stück haben Merle und ihren Freundinnen aus dem Blockflötenquartett instrumentalisiert. Schon <a href="./tag1.html">im ersten Türchen</a> stellen die vier Flötistinnen ihre musikalische Darbietung zum Marsch des Nussknackers vor.<br><br> Hört Ihr
+        die besonderen Passagen der Bass- und später der Altblockflöte heraus? Was die Zuckerfee da wohl gerade für spannende
+        Drehungen vollführt? Mit ein oder zwei Schlucken Glühwein sind der Fantasie sicherlich keine Grenzen gesetzt. Wir
+        hoffen, dir hat das Musikstück gefallen und wünschen frohe Weihnachten!</p>
+    </main>
+    <script>
+        button = document.querySelector("button")
+            function handleClick() {
+                document.querySelector('audio').play();
+                button.disabled = true;
+                button.innerText = "Viel Spaß";
+            }
+    </script>
+</body>
+
+</html>
