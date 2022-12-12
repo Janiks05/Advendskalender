@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Was ist es?</title>
+</head>
+
+<body>
+    <main>
+        <h1>Santa Claus is Coming to Town</h1>
+        <h2>Gesang von Ako</h2>
+        <audio controls>
+            <source src="./material/ako Song.mp3" type="audio/mp3">
+            Musikwiedergabe wird von deinem Browser nicht unterstützt.
+        </audio>
+        <button onclick="handleClick()">Anhören</button>
+        <p>Ich hoffe, der Song von
+            Haven Gillespie und J. Fred Coots hat euch gefallen und wünsche euch einen schönen vierten Advent!<br>
+            Ako Sternberg
+        </p>
+    </main>
+    <script>
+        button = document.querySelector("button")
+        function handleClick() {
+            document.querySelector('audio').play();
+            button.disabled = true;
+            button.innerText = "Viel Spaß";
+        }
+    </script>
+</body>
+
+</html>
