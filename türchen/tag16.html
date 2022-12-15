@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="./material/slidePuzzle2/puzzle.js"></script>
+    <title>Türchen 16</title>
+    <style>
+        canvas {
+            width: min(100%, 80vh);
+        }
+
+        #finalImage img {
+            max-width: 80vh;
+        }
+
+        figcaption,
+        select,
+        label, option, button {
+            font-size: 2rem;
+            color: white;
+        }
+
+        select,
+        option,
+        button {
+            padding: .5em .8em;
+            background-color: black;
+            border: 1px solid white;
+        }
+
+        select {
+            border-radius: 5px;
+            display: block;
+        }
+
+        form {
+            margin-bottom: 2em;
+        }
+
+        button {
+            font-weight: 400;
+            opacity: .5;
+            margin-bottom: 1rem;
+        }
+
+        figure {
+            margin-top: 4rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Wilder Weihnachtsmann</h1>
+    <h2>Schiebepuzzle von Clemens</h2>
+    <p>Santa Claus erwartet dich auf düsterer Straße! Löse das Rätsel durch Klicken auf Felder neben der Lücke. Schaffst du auch schwere Level?</p>
+    <form>
+        <label for="difficulty">Schwierigkeit wählen</label>
+        <select name="difficulty" id="difficulty">
+            <option value="easy">Einfach</option>
+            <option value="medium">Mittel</option>
+            <option value="hard">Schwer</option>
+            <option value="extreme">Extrem</option>
+            <option value="lifeOrDeath">Bis zum Tod</option>
+        </select>
+    </form>
+    <button id="showHint" onclick="hint()" style="font-size: 1.6rem;">Hilfe anzeigen</button>
+    <figure id="finalImage" style="display: none;">
+        <figcaption>So sieht das fertige Bild aus</figcaption>
+        <img src="./material/slidePuzzle2/Weihnachtsmann-Motorrad.jpg" alt="Weihnachtsmann auf Motorrad">
+    </figure>
+    <script>
+        const hintImage = document.querySelector("#finalImage")
+        const hintButton = document.querySelector("#showHint")
+        function hint() {
+            if (hintImage.style.display === "none") {
+                hintImage.style.display = "block"
+                window.location.href = "#finalImage"
+                hintButton.innerText = "Hilfe ausblenden"
+            } else {
+                hintImage.style.display = "none"
+                hintButton.innerText = "Hilfe anzeigen"
+            }
+        }
+    </script>
+</body>
+
+</html>
